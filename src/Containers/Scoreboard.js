@@ -13,8 +13,14 @@ class Scoreboard extends Component {
     return (
       <section>
         <Message message={ this.props.message } />
-        <Score header="Your Score" choice={ this.props.humanChoice } score={ this.props.humanScore } />
-        <Score header="Computer Score" choice={ this.props.computerChoice } score={ this.props.computerScore } />
+        <Score
+          header="Your Score"
+          choice={ this.props.humanChoice }
+          score={ this.props.humanScore } />
+        <Score
+          header="Computer Score"
+          choice={ this.props.computerChoice }
+          score={ this.props.computerScore } />
       </section>
     );
   }

@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 const Score = ({header, choice, score}) => {
   return (
-    <div>
-      <p>{header}</p>
-      <p>{choice}</p>
-      <p>{score}</p>
-    </div>
+    <section className="score-container">
+      <header className="score-header">{header}</header>
+      <p className="score-choice">{choice || <code>&nbsp;</code>}</p>
+      <p className="score-total">{score}</p>
+    </section>
   );
 };
 

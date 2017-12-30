@@ -27,7 +27,7 @@ class Choices extends Component {
 
   render() {
     return (
-      <div>
+      <div className="choices">
         {this.displayChoices()}
       </div>
     );

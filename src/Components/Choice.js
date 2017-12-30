@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Choice = ({choice, value, onClick}) => {
   return (
-    <button value={ value } onClick={ onClick }>{choice}</button>
+    <button className="choice" value={ value } onClick={ onClick }>{choice}</button>
   );
 };
 
