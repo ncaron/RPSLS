@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import CurrentChoices from './CurrentChoices';
 import Message from '../Components/Message';
 import Score from '../Components/Score';
 
@@ -13,16 +12,17 @@ class Scoreboard extends Component {
   render() {
     return (
       <section>
-        <CurrentChoices />
         <Message message={ this.props.message } />
-        <Score header="Your Score" score={ this.props.humanScore } />
-        <Score header="Computer Score" score={ this.props.computerScore } />
+        <Score header="Your Score" choice={ this.props.humanChoice } score={ this.props.humanScore } />
+        <Score header="Computer Score" choice={ this.props.computerChoice } score={ this.props.computerScore } />
       </section>
     );
   }
 }
 
 Scoreboard.propTypes = {
+  humanChoice: PropTypes.string.isRequired,
+  computerChoice: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
   humanScore: PropTypes.number.isRequired,
   computerScore: PropTypes.number.isRequired,

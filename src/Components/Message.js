@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Message = ({message}) => {
   return (
-    <p>{message}</p>
+    <p>{message || 'Good Luck!'}</p>
   );
 };
 
